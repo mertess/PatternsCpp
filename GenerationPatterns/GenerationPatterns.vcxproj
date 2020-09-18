@@ -148,10 +148,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AbstractFactory.cpp" />
     <ClCompile Include="FactoryMethod.cpp" />
     <ClCompile Include="GenerationPatterns.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractFactory.h" />
     <ClInclude Include="FactoryMethod.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

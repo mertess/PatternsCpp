@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "FactoryMethod.h"
+#include "AbstractFactory.h"
 
 int main()
 {
@@ -21,6 +22,13 @@ int main()
 		std::cout << obj2->get_name() << std::endl;
 		delete factory;
 		delete obj2;
+	}
+	//AbstractFactory
+	{
+		Hero* hero = new Hero(new BlackSwordFlyFactory());
+		hero->move();
+		std::cout << hero->get_name_sword();
+		delete hero;
 	}
 	return 0;
 }
