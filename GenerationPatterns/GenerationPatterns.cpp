@@ -4,6 +4,8 @@
 #include <iostream>
 #include "FactoryMethod.h"
 #include "AbstractFactory.h"
+#include "Prototype.h"
+#include "Builder.h"
 
 int main()
 {
@@ -27,8 +29,36 @@ int main()
 	{
 		Hero* hero = new Hero(new BlackSwordFlyFactory());
 		hero->move();
-		std::cout << hero->get_name_sword();
+		std::cout << hero->get_name_sword() << std::endl;
 		delete hero;
+	}
+	//PrototypePattern
+	{
+		ICloneable* figure = new Rectangle(10, 5);
+		figure->get_info();
+		auto cloneRect = figure->clone();
+		cloneRect->get_info();
+		delete figure;
+		delete cloneRect;
+		figure = new Circle(5);
+		figure->get_info();
+		auto cloneCircle = figure->clone();
+		cloneCircle->get_info();
+		delete figure;
+		delete cloneCircle;
+	}
+	//BuilderPattern
+	{
+		DocumentCreator* creator = new DocumentCreator(new ExcelDocumentBuilder());
+		auto doc = creator->createDocument();
+		std::cout << doc->Title << " " << doc->Type << " " << doc->Body << std::endl;
+		delete doc;
+		delete creator;
+		creator = new DocumentCreator(new PdfDocumentBuilder());
+		doc = creator->createDocument();
+		std::cout << doc->Title << " " << doc->Type << " " << doc->Body << std::endl;
+		delete doc;
+		delete creator;
 	}
 	return 0;
 }

@@ -24,12 +24,24 @@
     <ClCompile Include="AbstractFactory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Prototype.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Builder.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FactoryMethod.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="AbstractFactory.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Prototype.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Builder.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
